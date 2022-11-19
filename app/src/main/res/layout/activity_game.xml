@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/game0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gameLostTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="0"
+        android:text="Проигрыш..."
+        android:textColor="#BB4444"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/gameWonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="0"
+        android:text="Победа!!!"
+        android:textColor="#44BB44"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/wordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.3"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        tools:text="_ _ _ _ _ _ _ _ _" />
+
+    <TextView
+        android:id="@+id/lettersUsedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/wordTextView"
+        tools:text="Использованные буквы: " />
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Начать игру"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lettersUsedTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lettersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newGameButton">
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            app:constraint_referenced_ids="а,б,в,г,д,е,ё,ж,з,и,й,к,л,м,н,о,п,р,с,т,у,ф,х,ц,ч,ш,щ,ъ,ы,ь,э,ю,я"
+            app:flow_wrapMode="chain2" />
+
+        <TextView
+            android:id="@+id/а"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="А"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/б"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Б"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/в"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="В"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/г"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Г"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/д"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Д"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/е"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Е"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ё"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ё"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ж"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ж"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/з"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="З"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/и"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="И"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/й"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Й"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/к"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="К"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/л"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Л"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/м"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="М"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/н"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Н"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/о"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="О"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/п"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="П"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/р"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Р"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/с"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="С"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/т"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Т"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/у"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="У"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ф"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ф"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/х"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Х"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ц"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ц"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ч"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ч"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ш"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Щ"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/щ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Щ"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ъ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ъ"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ы"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ы"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ь"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ь"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/э"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Э"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/ю"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Ю"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/я"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary"
+            android:paddingHorizontal="10dp"
+            android:text="Я"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
