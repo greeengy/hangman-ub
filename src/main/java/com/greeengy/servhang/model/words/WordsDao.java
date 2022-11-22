@@ -19,11 +19,11 @@ public class WordsDao {
     public List<Words> getAllWords() {
         List<Words> Words = new ArrayList<>();
         Streamable.of(repository.findAll())
-                .forEach(words::add);
-        return words;
+                .forEach(Words::add);
+        return Words;
     }
 
-    public void delete(int employeeId) {
-        repository.deleteById(employeeId);
+    public void delete(int wordsId) {
+        repository.deleteById(wordsId);
     }
 }

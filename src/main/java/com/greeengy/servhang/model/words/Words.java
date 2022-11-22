@@ -21,11 +21,11 @@ public class Words {
         this.id = id;
     }
 
-    public String getName() {
+    public String getWord() {
         return word;
     }
 
-    public void setName(String name) {
+    public void setWord(String word) {
         this.word = word;
     }
 
@@ -34,7 +34,7 @@ public class Words {
     public String toString() {
         return "Words{" +
                 "id=" + id +
-                ", name='" + word + '\'' +
+                ", word='" + word + '\'' +
                 '}';
     }
 }
