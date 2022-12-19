@@ -25,7 +25,12 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".FacChoice" />
+        <activity android:name=".KafChoice" />
+        <activity android:name=".Menu" />
         <activity android:name=".GameActivity" />
+        <activity android:name=".GameActivityT" />
+        <activity android:name=".GameActivityS" />
     </application>
 
 </manifest>

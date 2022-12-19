@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameActivity"
+    tools:context=".GameActivityS"
     >
 
     <ImageView
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Начать игру"
+        android:text="Новое слово"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lettersUsedTextView" />
@@ -94,7 +94,7 @@
             android:layout_height="match_parent"
 
             android:padding="16dp"
-            app:constraint_referenced_ids="а,б,в,г,д,е,ё,ж,з,и,й,к,л,м,н,о,п,р,с,т,у,ф,х,ц,ч,ш,щ,ъ,ы,ь,э,ю,я,prob"
+            app:constraint_referenced_ids="а,б,в,г,д,е,ё,ж,з,и,й,к,л,м,н,о,п,р,с,т,у,ф,х,ц,ч,ш,щ,ъ,ы,ь,э,ю,я"
             app:flow_wrapMode="chain2" />
 
         <TextView
@@ -428,17 +428,6 @@
             android:text="Я"
             android:textColor="@color/white"
             android:textSize="24dp" />
-
-        <TextView
-            android:id="@+id/prob"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_style"
-            android:paddingHorizontal="10dp"
-            android:text=" "
-            android:textColor="@color/white"
-            android:textSize="24dp" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

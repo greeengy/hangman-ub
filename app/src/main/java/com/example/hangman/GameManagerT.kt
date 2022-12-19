@@ -2,7 +2,7 @@ package com.example.hangman
 
 import kotlin.random.Random
 
-class GameManager {
+class GameManagerT {
     private var lettersUsed: String = ""
     private lateinit var underscoreWord: String
     private lateinit var wordToGuess: String
@@ -14,8 +14,8 @@ class GameManager {
         lettersUsed = ""
         currentTries = 0
         drawable = R.drawable.game7
-        val randomIndex = Random.nextInt(0, GameConstants.words.size)
-        wordToGuess = GameConstants.words[randomIndex]
+        val randomIndex = Random.nextInt(0, GameConstantsT.words.size)
+        wordToGuess = GameConstantsT.words[randomIndex]
         generateUnderscores(wordToGuess)
         return getGameState()
     }
@@ -23,8 +23,8 @@ class GameManager {
     fun generateUnderscores(word: String) {
         val sb = StringBuilder()
         word.forEach { char ->
-            if (char == '/') {
-                sb.append('/')
+            if (char == ' ') {
+                sb.append(' ')
             } else {
                 sb.append("_")
             }

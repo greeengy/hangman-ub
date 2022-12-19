@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Hangman</string>
+    <string name="button_back">Назад</string>
+    <string name="predm">Предметы</string>
+    <string name="terms">Термины</string>
+    <string name="society">Социальная жизнь</string>
 </resources>

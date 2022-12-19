@@ -10,14 +10,33 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+class Menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val playButton: Button = findViewById(R.id.playButton)
+        setContentView(R.layout.menu)
+        val buttonBack: Button = findViewById(R.id.button_back2)
 
-        playButton.setOnClickListener {
+        buttonBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val predm: Button = findViewById(R.id.predm)
+
+        predm.setOnClickListener {
             val intent = Intent(this, GameActivity::class.java)
+            startActivity(intent)
+        }
+        val terms: Button = findViewById(R.id.terms)
+
+        terms.setOnClickListener {
+            val intent = Intent(this, GameActivityT::class.java)
+            startActivity(intent)
+        }
+        val society: Button = findViewById(R.id.society)
+
+        society.setOnClickListener {
+            val intent = Intent(this, GameActivityS::class.java)
             startActivity(intent)
         }
     }

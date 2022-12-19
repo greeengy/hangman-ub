@@ -1,5 +1,6 @@
 package com.example.hangman
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -22,6 +23,8 @@ class GameActivity : AppCompatActivity() {
     private lateinit var newGameButton: Button
     private lateinit var lettersLayout: ConstraintLayout
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
@@ -35,6 +38,14 @@ class GameActivity : AppCompatActivity() {
         newGameButton.setOnClickListener {
             startNewGame()
         }
+
+        val buttonBack: Button = findViewById(R.id.button_back)
+
+        buttonBack.setOnClickListener {
+            val intent = Intent(this, Menu::class.java)
+            startActivity(intent)
+        }
+
         val gameState = gameManager.startNewGame()
         updateUI(gameState)
 
@@ -54,7 +65,7 @@ class GameActivity : AppCompatActivity() {
             is GameState.Lost -> showGameLost(gameState.wordToGuess)
             is GameState.Running -> {
                 wordTextView.text = gameState.underscoreWord
-                lettersUsedTextView.text = "Letters used: ${gameState.lettersUsed}"
+                lettersUsedTextView.text = "Использованные буквы: ${gameState.lettersUsed}"
                 imageView.setImageDrawable(ContextCompat.getDrawable(this, gameState.drawable))
             }
             is GameState.Won -> showGameWon(gameState.wordToGuess)

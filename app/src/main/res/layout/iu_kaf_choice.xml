@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/hngman_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_back_to_fac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_back" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Выберите кафедру:"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/button_iu1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ИУ1 Системы автоматического управления" />
+
+        <Button
+            android:id="@+id/button_iu2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ2 Приборы и системы ориентации, стабилизации и навигации" />
+
+        <Button
+            android:id="@+id/button_iu3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ3 Информационные системы и телекоммуникации" />
+
+        <Button
+            android:id="@+id/button_iu4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ4 Проектирование и технология производства электронной аппаратуры" />
+
+        <Button
+            android:id="@+id/button_iu5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ5 Системы обработки информации и управления" />
+
+        <Button
+            android:id="@+id/button_iu6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ6 Компьютерные системы и сети" />
+
+        <Button
+            android:id="@+id/button_iu7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ7 Программное обеспечение ЭВМ и информационные технологии" />
+
+        <Button
+            android:id="@+id/button_iu8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ8 Информационная безопасность" />
+
+        <Button
+            android:id="@+id/button_iu9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ9 Теоретическая информатика и компьютерные технологии" />
+
+        <Button
+            android:id="@+id/button_iu10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ10 Защита информации" />
+
+        <Button
+            android:id="@+id/button_iu11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ11 Космические приборы и системы" />
+
+        <Button
+            android:id="@+id/button_iu12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ИУ12 Технологии искусственного интеллекта" />
+    </LinearLayout>
+</RelativeLayout>

@@ -11,9 +11,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
 
-class GameActivity : AppCompatActivity() {
+class GameActivityT : AppCompatActivity() {
 
-    private val gameManager = GameManager()
+    private val gameManagerT = GameManagerT()
 
     private lateinit var wordTextView: TextView
     private lateinit var lettersUsedTextView: TextView
@@ -42,17 +42,17 @@ class GameActivity : AppCompatActivity() {
         val buttonBack: Button = findViewById(R.id.button_back)
 
         buttonBack.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Menu::class.java)
             startActivity(intent)
         }
 
-        val gameState = gameManager.startNewGame()
+        val gameState = gameManagerT.startNewGame()
         updateUI(gameState)
 
         lettersLayout.children.forEach { letterView ->
             if (letterView is TextView) {
                 letterView.setOnClickListener {
-                    val gameState = gameManager.play((letterView).text[0])
+                    val gameState = gameManagerT.play((letterView).text[0])
                     updateUI(gameState)
                     letterView.visibility = View.GONE
                 }
@@ -65,7 +65,7 @@ class GameActivity : AppCompatActivity() {
             is GameState.Lost -> showGameLost(gameState.wordToGuess)
             is GameState.Running -> {
                 wordTextView.text = gameState.underscoreWord
-                lettersUsedTextView.text = "Letters used: ${gameState.lettersUsed}"
+                lettersUsedTextView.text = "Использованные буквы: ${gameState.lettersUsed}"
                 imageView.setImageDrawable(ContextCompat.getDrawable(this, gameState.drawable))
             }
             is GameState.Won -> showGameWon(gameState.wordToGuess)
@@ -88,7 +88,7 @@ class GameActivity : AppCompatActivity() {
     private fun startNewGame() {
         gameLostTextView.visibility = View.GONE
         gameWonTextView.visibility = View.GONE
-        val gameState = gameManager.startNewGame()
+        val gameState = gameManagerT.startNewGame()
         lettersLayout.visibility = View.VISIBLE
         lettersLayout.children.forEach { letterView ->
             letterView.visibility = View.VISIBLE

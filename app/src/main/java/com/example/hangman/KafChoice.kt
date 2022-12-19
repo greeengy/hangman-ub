@@ -10,13 +10,20 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+class KafChoice : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val playButton: Button = findViewById(R.id.playButton)
+        setContentView(R.layout.iu_kaf_choice)
+        val button_iu6: Button = findViewById(R.id.button_iu6)
 
-        playButton.setOnClickListener {
+        button_iu6.setOnClickListener {
+            val intent = Intent(this, com.example.hangman.Menu::class.java)
+            startActivity(intent)
+        }
+
+        val button_back_to_fac: Button = findViewById(R.id.button_back_to_fac)
+
+        button_back_to_fac.setOnClickListener {
             val intent = Intent(this, com.example.hangman.FacChoice::class.java)
             startActivity(intent)
         }
